@@ -1,0 +1,14 @@
+phrase=input("Enter the string\n")
+phrase2=""
+stack=[]
+for j in phrase:
+ stack.append(j)
+
+while len(stack)!=0:
+ phrase2=phrase2+stack.pop()
+
+if(phrase2==phrase):
+ print(" Palendrom")
+
+else:
+ print("Not Palendrom")
