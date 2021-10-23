@@ -1,0 +1,18 @@
+expression=input("Enter an expression\n")
+stack=[]
+var1=0
+
+for j in expression:
+ if(j=='[' or j=='(' or j=='{'):
+    stack.append(j)
+ if(j==']' or j==')' or j=='}'):
+   if(len(stack)==0):
+      var1+=1;
+   else:
+    print(stack.pop())
+
+if ((len(stack)==0) and var1==0):
+  print("Expression is balanced")
+  
+else:
+  print("Expression is unbalanced")
